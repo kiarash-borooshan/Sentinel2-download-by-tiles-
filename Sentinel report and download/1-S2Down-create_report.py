@@ -106,3 +106,11 @@ if os.path.isfile(parent_dir + "/" + "report less cloud percent and size  .csv")
     MyDF.to_csv(parent_dir + "/" + "report less cloud percent and size  .csv")
 else:
     MyDF.to_csv(parent_dir + "/" + "report less cloud percent and size  .csv")
+
+toc_report = time.time()
+unite = "sec"
+du = toc_report - tic_report
+if du > 60:
+    unite = "min"
+    du = du / 60
+print("duration {} {}" .format(du, unite))
